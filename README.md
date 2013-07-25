@@ -1,5 +1,4 @@
 vim-config
 ==========
 
-Clone
-Installation: ln -s .vim/vimrc .vimrc
+**Installation:** ln -s .vim/vimrc .vimrc
