@@ -11,7 +11,7 @@ set tabstop=4
 colorscheme elflord
 
 set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors
-let g:Powerline_symbols = 'unicode'
+" let g:Powerline_symbols = 'unicode'
 
 filetype on " Enable filetype detection
 filetype indent on " Enable filetype-specific indenting
