@@ -2,6 +2,7 @@
 syntax on
 
 let mapleader=","
+let g:pymode_lint_ignore = "E501"
 
 set tabstop=4
 set nocompatible " Disable vi-compatibility
