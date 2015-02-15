@@ -1,4 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/home/owe/workspace/Altana/actega-ecommerce/ecommerce-web'
 let g:netrw_dirhist_2='/home/owe/workspace/JCI/PMD2/devops'
+let g:netrw_dirhist_3='/Users/renehoehle/Downloads/certificate'
+let g:netrw_dirhist_4='/Users/renehoehle/Downloads/certificate/Linux (pem+cabundle)'
+let g:netrw_dirhist_5='/Applications/MAMP'
+let g:netrw_dirhist_6='/Applications/PhpStorm.app/Contents/bin'
+let g:netrw_dirhist_7='/Users/renehoehle/.atlassian'
+let g:netrw_dirhist_8='/Users/renehoehle/.ssh'

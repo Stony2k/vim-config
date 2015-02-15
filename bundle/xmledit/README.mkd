@@ -3,7 +3,9 @@ xml-plugin
 Maintainer: Devin Weaver <suki@tritarget.org>  
 Source: <http://github.com/sukima/xmledit>  
 Homepage: <http://www.vim.org/scripts/script.php?script_id=301>  
-Version: 1.10.2
+Version: 1.10.5
+
+[![Build Status](https://travis-ci.org/sukima/xmledit.png?branch=master)](https://travis-ci.org/sukima/xmledit)
 
 XML Edit is a file type plugin to help edit XML documents.
 It includes tag completion and tag jumping.
@@ -15,17 +17,15 @@ and/or modify it under the terms of the GNU General Public
 License.  
 See <http://www.gnu.org/copyleft/gpl.txt>
 
-Build
------
-Run the Makefile to build the vba file.
-
-    $ make
-
-Now send it to all your friends.
-
 Install
 -------
-This is for users who have the xmledit.vba file.
+
+xmledit can be installed using a `xmledit.vba` file or using Pathogen.
+
+### Installation using `xmledit.vba`
+
+First you need a `xmledit.vba` vimball. You can create one following the
+instruction in the [Build](#build) section.
 
 If you do not have VIM version 7.0 or higher this will not work. Either upgrade
 or deal with the shaddy old plugin which you can get at
@@ -45,20 +45,36 @@ skip the building of one by running the Makefile:
 
 Now read doc/xml-plugin.txt or type `:help xml-plugin.txt` in VIM.
 
-** NOTE for pathogen users **  
-You do not need to install via any means other then to place the source in the
-bundle directory. This can easily be done by cloning the [git repository][1] or
-by making a [git submodule][2]. Do not attempt to use a .vba file with
-pathogen.
+### Installation for Pathogen
 
-    $ git clone https://github.com/sukima/xmledit.git ~/.vim/bundle/
+To use xmledit in combination with Pathogen you need to place the sources in the
+bundle directory. This can easily be done by cloning the [git repository][1].
 
-Or as a submodule (assuming .vim is a git repository)
+    $ git clone https://github.com/sukima/xmledit.git ~/.vim/bundle/xmledit
 
-    $ cd ~/.vim
-    $ git submodule init
-    $ git submodule add https://github.com/sukima/xmledit.git bundle/
-    $ git submodule update
+Instead of cloning you can use [git submodules][2].
+
+Do not use the `xmledit.vba` file with pathogen.
+
+
+Build
+-----
+Run the Makefile to build the vba file.
+
+    $ make
+
+Now send it to all your friends.
+
+Testing
+-------
+The test environment is in the `tests` directory. It uses RSpec and
+[vimrunner](https://github.com/AndrewRadev/vimrunner). Execute the test suite:
+
+    $ bundle install
+    $ rake
+
+More information about testing in vim can be found at
+[this blog post](http://mudge.name/2012/04/18/testing-vim-plugins-on-travis-ci-with-rspec-and-vimrunner.html).
 
 Using With Other File Types
 ---------------------------
@@ -93,6 +109,32 @@ the following to your `.vimrc` as suggested by @othree in [issue #15][4]:
 
     autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags noci
     autocmd FileType html set omnifunc=htmlcomplete#CompleteTags noci
+
+How to contribute
+-----------------
+
+Individuals making significant and valuable contributions are given commit-access to the project to contribute as they see fit. This project is more like an open wiki than a standard guarded open source project.
+
+## Rules
+
+There are a few basic ground-rules for contributors:
+
+1. **No `--force` pushes** or modifying the Git history in any way.
+1. **Non-master branches** ought to be used for ongoing work.
+1. **External API changes and significant modifications** ought to be subject to an **internal pull-request** to solicit feedback from other contributors.
+1. Internal pull-requests to solicit feedback are *encouraged* for any other non-trivial contribution but left to the discretion of the contributor.
+1. Contributors should attempt to adhere to the prevailing code-style.
+
+## Releases
+
+Declaring formal releases remains the prerogative of the project maintainer.
+
+## Changes to this arrangement
+
+This is an experiment and feedback is welcome! This document may also be subject to pull-requests or changes by contributors where you believe you have something valuable to add or change.
+
+I am in need of unit tests. Anyone interested in helping please fork and add to
+the `tests/spec/` directory.
 
 Credits
 -------
