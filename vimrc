@@ -2,7 +2,6 @@
 syntax on
 
 let mapleader=","
-let g:pymode_lint_ignore = "E501"
 
 set tabstop=4
 set nocompatible " Disable vi-compatibility
@@ -53,7 +52,8 @@ au BufRead,BufNewFile *.scala set filetype=scala
 
 "Plugins
 call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
 
 map <C-n> :NERDTreeToggle<CR>
 map <leader>gt :call TimeLapse() <cr> 
+
+let g:snipMate = { 'snippet_version' : 1 }
