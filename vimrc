@@ -9,8 +9,9 @@ set laststatus=2 " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
 set tabstop=4
 set paste
+set background=dark
 
-colorscheme elflord
+colorscheme atom-dark
 
 " --column: Show column number
 " --line-number: Show line numober
